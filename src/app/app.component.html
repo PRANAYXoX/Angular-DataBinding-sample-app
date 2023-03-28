@@ -1,16 +1,44 @@
 <div class="container-fluid h1 bg-dark text-light" id="header">POST FORM</div>
 <div class="container bg-warning" id="form-box">
   <div class="row d-flex" id="ip1">
-    <input type="text" placeholder="Post Title" class="box-ip" />
+    <input
+      type="text"
+      placeholder="Post Title"
+      class="box-ip"
+      [(ngModel)]="postTitle"
+      #username
+      (keypress)="getTitle(username.value)"
+    />
   </div>
   <div class="row d-flex" id="ip1">
-    <textarea type="text" placeholder="Post Details" class="box-ip"></textarea>
+    <textarea
+      type="text"
+      placeholder="Post Details"
+      class="box-ip"
+      [(ngModel)]="postDesc"
+      #postD
+      (keypress)="getDesc(postD.value)"
+    ></textarea>
   </div>
   <div class="row d-flex" id="ip1">
-    <input type="text" placeholder="Image URL....." class="box-ip" />
+    <input
+      type="text"
+      placeholder="Image URL....."
+      class="box-ip"
+      [(ngModel)]="imgUrl"
+      #imgU
+      (keypress)="getImg(imgU.value)"
+    />
   </div>
   <div class="row d-flex" id="ip1">
-    <input type="text" placeholder="Website URL....." class="box-ip" />
+    <input
+      type="text"
+      placeholder="Website URL....."
+      class="box-ip"
+      [(ngModel)]="webUrl"
+      #webU
+      (keypress)="getLink(webU.value)"
+    />
   </div>
   <div class="row d-flex mt-2" id="ip1">
     <div class="ckb">
@@ -19,3 +47,10 @@
     <div class="all"><label for="bg1"> Add BackGround</label><br /></div>
   </div>
 </div>
+<hr />
+<app-output-block
+  [forChild]="postTitle"
+  [forChild2]="postDesc"
+  [forChild3]="imgUrl"
+  [forChild4]="webUrl"
+></app-output-block>
