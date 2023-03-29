@@ -33,3 +33,9 @@ img {
   border-radius: 10px;
   background-color: grey;
 }
+a {
+  color: orangered;
+  font-weight: 800;
+  text-shadow: 4px black;
+  font-size: larger;
+}

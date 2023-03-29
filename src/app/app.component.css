@@ -6,7 +6,9 @@
   font-weight: 700;
 }
 #form-box {
-  border: 2px solid black;
+  box-shadow: 5px solid black;
+  border-radius: 10px;
+  background-color: orangered;
 }
 #ip1 {
   justify-content: center;
